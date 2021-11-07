@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:endColor="@color/capturar_gesto_inicial"
+        android:startColor="@color/capturar_gestp_final"
+        android:angle="90"
+        />
+</shape>

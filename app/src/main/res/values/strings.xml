@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">segurapp</string>
+    <string name="title_activity_map">Map</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_capturar_gesto">Capturar gesto</string>
+    <string name="label_capturar_gesto_lorem">Haz click en “capturar”  para realizar el gesto que activará la alarma en caso de emergencia</string>
+
+    <string name="label_sabias_que">¿Sabias que...</string>
+    <string name="label_sabias_que_lorem">puedes vincular tu smartphone con un dispositivo smartwatch que tambien sirve como activador de la alerta?</string>
+
+    <string name="label_vincular">Vincular dispositivo</string>
+
+    <string name="label_continuar">Continuar</string>
+    <string name="label_entendido">Entendido</string>
+    <string name="label_conecatar">Conectar</string>
+    <string name="label_omitit">Omitir</string>
+    <string name="imagen_description">imagen vincular</string>
+    <string name="label_vincular_dispositivo">Vincular dispositivo</string>
+    <string name="label_vincular_lorem">Enciende el bluetooth y selecciona el smartwatch</string>
+    <string name="label_vincular_btn">Vincular</string>
+
+</resources>

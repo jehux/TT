@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="principal_pink">#FD3582</color>
+    <color name="principal_violet">#EF1FC1</color>
+    <color name="principal_blue">#47A9FC</color>
+    <color name="splash_inicial">#FF74AA</color>
+    <color name="splash_final">#FF023F</color>
+
+    <color name="capturar_gesto_inicial">#150364</color>
+    <color name="capturar_gestp_final">#3F63DB</color>
+
+    <color name="botton_continuar_inicio">#F8F8F8</color>
+    <color name="botton_continuar_final">#E7E7E7</color>
+
+    <color name="background_conectar_smartwatch_inicio">#180063</color>
+    <color name="background_conectar_smartwatch_final">#7809B0</color>
+
+    <color name="background_vincular_inical">#170C6C</color>
+    <color name="background_vincular_final">#1CACDE</color>
+
+</resources>
