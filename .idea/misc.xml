@@ -3,7 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/btn_back_from_map.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/shape_button_continuar.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_fragment_introduction.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_incidents.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_map.xml" value="0.22" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/fragment_capturar_gesto.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/fragment_conectar_smart_watch.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/fragment_vincular_dispositivo.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/incidents_card.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/incidents_grid.xml" value="0.1" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/menu/bar_search_in_map.xml" value="0.184375" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/xml/searchable.xml" value="0.16485507246376813" />
       </map>
     </option>
   </component>
