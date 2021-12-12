@@ -19,14 +19,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Segurapp">
         <activity
+            android:name=".view.IncidentsActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.IntroductionActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
 
         <meta-data
@@ -41,8 +43,6 @@
             android:label="@string/title_activity_map" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
-
-
                 <action android:name="android.intent.action.CALL_PRIVILEGED" />
             </intent-filter>
         </activity>

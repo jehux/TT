@@ -41,9 +41,11 @@ class MainActivity : AppCompatActivity() {
         ivVerMapa = findViewById(R.id.image_view_ver_mapa)
         ivVerMapa.setOnClickListener {
             //fun onClick(view: View){
-            val intent= Intent(this@MainActivity, Map::class.java)
-            startActivity(intent)
+            //val intent= Intent(this@MainActivity, Map::class.java)
+            //startActivity(intent)
             //}
+            val intent = Intent(this@MainActivity, IncidentsActivity::class.java)
+            startActivity(intent)
         }
 
         this.contactsAlertPresenter = ContactsAlertPresenterImpl(this, this.view, this)
