@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#00571111">
+
+    <TextView
+        android:id="@+id/textView_contact_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="Contacto principal"
+        android:textColor="@color/morado_segurapp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="211dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/rosa_pachita"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Nombre"
+        android:textColor="#FD5D9D"
+        android:textColorHint="#FD5D9D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_contact_label" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="@color/morado_segurapp"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:text="telefono"
+        android:textColor="@color/morado_segurapp"
+        android:textColorHint="@color/morado_segurapp"
+        android:textColorLink="@color/morado_segurapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="330dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_phone" />
+
+    <ImageView
+        android:id="@+id/imageView_delete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+</androidx.constraintlayout.widget.ConstraintLayout>

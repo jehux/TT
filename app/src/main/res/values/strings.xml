@@ -19,5 +19,8 @@
     <string name="label_vincular_dispositivo">Vincular dispositivo</string>
     <string name="label_vincular_lorem">Enciende el bluetooth y selecciona el smartwatch</string>
     <string name="label_vincular_btn">Vincular</string>
+    <string name="home">home</string>
+    <string name="perfil">Perfil</string>
+    <string name="contactos">contactos</string>
 
 </resources>

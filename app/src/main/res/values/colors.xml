@@ -13,6 +13,9 @@
     <color name="splash_inicial">#FF74AA</color>
     <color name="splash_final">#FF023F</color>
 
+    <color name="rosa_pachita">#FD5D9D</color>
+    <color name="morado_segurapp">#E2DDFF</color>
+
     <color name="capturar_gesto_inicial">#150364</color>
     <color name="capturar_gestp_final">#3F63DB</color>
 
