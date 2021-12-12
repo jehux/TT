@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.segurapp.R
@@ -23,6 +24,7 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
     private lateinit var view: View
     private lateinit var incidentsAdapter: IncidentsAdapter
     private lateinit var context: Context
+    private val NUMBER_ELEMT_IN_GRID = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +35,7 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
 
         this.view = View(this)
         this.context = this
-        var linearLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
+        var linearLayoutManager: LinearLayoutManager = GridLayoutManager(this, NUMBER_ELEMT_IN_GRID)
         this.recyclerViewIncidents.layoutManager = linearLayoutManager
 
         incidentsPresenter = IncidentsPresenterImpl(this, this.view, this)
