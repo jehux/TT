@@ -1,34 +1,71 @@
 package com.segurapp.view
 
+import android.app.Activity
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.LinearLayout
+import android.widget.ProgressBar
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.segurapp.R
+import com.segurapp.interfaces.incidents.IncidentsPresenter
 import com.segurapp.interfaces.incidents.IncidentsView
+import com.segurapp.presenter.incidents.IncidentsPresenterImpl
+import com.segurapp.presenter.incidents.adapters.IncidentsAdapter
 
 class IncidentsActivity : AppCompatActivity(), IncidentsView {
+    private lateinit var recyclerViewIncidents : RecyclerView
+    private lateinit var progressMoreIncidents: ProgressBar
+    private lateinit var incidentsPresenter: IncidentsPresenter
+    private lateinit var view: View
+    private lateinit var incidentsAdapter: IncidentsAdapter
+    private lateinit var context: Context
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_incidents)
+
+        this.recyclerViewIncidents = findViewById(R.id.recycler_incidents)
+        this.progressMoreIncidents = findViewById(R.id.progress_wait_incidents)
+
+        this.view = View(this)
+        this.context = this
+        var linearLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
+        this.recyclerViewIncidents.layoutManager = linearLayoutManager
+
+        incidentsPresenter = IncidentsPresenterImpl(this, this.view, this)
     }
 
-    override fun showProgress(): Void {
-        TODO("Not yet implemented")
-
+    override fun onResume() {
+        super.onResume()
+        this.incidentsPresenter.loadIncidents()
     }
 
-    override fun showIncidentsCards(): Void {
-        TODO("Not yet implemented")
+    override fun showProgressBar(): Unit {
+        this.progressMoreIncidents.visibility = View.VISIBLE
+    }
+    override fun hideProgressBar(): Unit{
+        this.progressMoreIncidents.visibility = View.GONE
+    }
+    override fun showIncidentsCards(incidents: Array<String>): Unit {
+        this.incidentsAdapter = IncidentsAdapter(incidents)
+        this.recyclerViewIncidents.adapter = this.incidentsAdapter
+        this.incidentsAdapter?.notifyDataSetChanged()
     }
 
-    override fun setMessageInfo(): Void {
-        TODO("Not yet implemented")
+    override fun setMessageInfo(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun setMessageSuccess(): Void {
-        TODO("Not yet implemented")
+    override fun setMessageSuccess(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    override fun setMessageError(): Void {
-        TODO("Not yet implemented")
+    override fun setMessageError(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
 }
