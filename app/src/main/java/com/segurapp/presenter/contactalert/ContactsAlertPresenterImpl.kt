@@ -13,9 +13,9 @@ import androidx.core.content.ContextCompat
 import com.segurapp.interfaces.contactalert.ContactsAlertPresenter
 import com.segurapp.interfaces.contactalert.OnContactsAlertFinishedListener
 
-class ContactsAlertPresenterImpl constructor(context: Context, view: View, activity: Activity) : ContactsAlertPresenter, OnContactsAlertFinishedListener {
+class ContactsAlertPresenterImpl constructor(context: Context, activity: Activity) : ContactsAlertPresenter, OnContactsAlertFinishedListener {
     private var context: Context = context
-    private var view: View = view
+
     private var activity: Activity = activity
 
     override fun callToEmergency() {

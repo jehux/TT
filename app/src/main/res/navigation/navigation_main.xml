@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_main">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/perfilFragment">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.segurapp.view.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.segurapp.view.fragments.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/contactosFragment"
+        android:name="com.segurapp.view.fragments.ContactosFragment"
+        android:label="fragment_contactos"
+        tools:layout="@layout/fragment_contactos" />
 </navigation>
