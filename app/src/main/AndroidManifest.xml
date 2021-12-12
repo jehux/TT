@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Segurapp">
         <activity
-            android:name=".presenter.contactalert.IncidentsActivity"
+            android:name=".view.IncidentsActivity"
             android:exported="false" />
         <activity
             android:name=".view.IntroductionActivity"

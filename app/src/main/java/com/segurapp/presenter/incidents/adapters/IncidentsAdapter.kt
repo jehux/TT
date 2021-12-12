@@ -1,4 +1,4 @@
-package com.segurapp.presenter.contactalert.adapters
+package com.segurapp.presenter.incidents.adapters
 
 import android.view.LayoutInflater
 import android.view.View
