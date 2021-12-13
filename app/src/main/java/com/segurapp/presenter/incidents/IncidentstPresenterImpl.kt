@@ -22,9 +22,11 @@ class IncidentsPresenterImpl constructor(
             //Aqui va la llamada a la api
             val incidents = arrayOf("Hola", "dadsas", "dajsdkals", "dakjsdklas", "dkajsdklas", "jdajsdkla")
             this.incidentsView.showIncidentsCards(incidents)
+            println("hola anmigos de youtube**********")
             this.incidentsInteractor.getIncidents("ditto", this)
         }catch (e: Exception){
-            print(e.printStackTrace())
+            println("Error**********trycarch")
+            println(e.printStackTrace())
             this.incidentsView.setMessageError("Algo salio, intente de nuevo")
         }
         this.incidentsView.hideProgressBar()

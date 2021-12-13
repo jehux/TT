@@ -8,6 +8,6 @@ import retrofit2.http.Path
 
 interface IncidentsServices {
     @GET(ConstantsAPI.INCIDENT)
-    fun getIncidents(@Path("incident") parameterName: String): Call<List<IncidentsResponse>>
+    fun getIncidents(@Path("incident") parameterName: String): Call<IncidentsResponse>
 
 }

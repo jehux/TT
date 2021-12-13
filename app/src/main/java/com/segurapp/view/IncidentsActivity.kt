@@ -37,12 +37,13 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
         this.context = this
         var linearLayoutManager: LinearLayoutManager = GridLayoutManager(this, NUMBER_ELEMT_IN_GRID)
         this.recyclerViewIncidents.layoutManager = linearLayoutManager
-
+        println("hola amigos de yourube")
         incidentsPresenter = IncidentsPresenterImpl(this, this.view, this)
     }
 
     override fun onResume() {
         super.onResume()
+        println("hola amigos de yourube")
         this.incidentsPresenter.loadIncidents()
     }
 
@@ -53,6 +54,7 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
         this.progressMoreIncidents.visibility = View.GONE
     }
     override fun showIncidentsCards(incidents: Array<String>): Unit {
+        println("hola amigos de yourube")
         this.incidentsAdapter = IncidentsAdapter(incidents)
         this.recyclerViewIncidents.adapter = this.incidentsAdapter
         this.incidentsAdapter?.notifyDataSetChanged()

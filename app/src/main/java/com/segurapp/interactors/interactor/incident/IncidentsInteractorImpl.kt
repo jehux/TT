@@ -21,23 +21,29 @@ class IncidentsInteractorImpl : IncidentsInteractor{
 
     override fun getIncidents(typeIncidents: String, incidentsPresenter: IncidentsPresenter): Unit {
         val call = apiClient?.getIncidents(typeIncidents)
-        print("Hola*******++++ pendejos ***************")
-        call?.enqueue(object : Callback<List<IncidentsResponse>>{
-            override fun onFailure(call: Call<List<IncidentsResponse>>?, t: Throwable?) {
-                Log.d("Fallo*****************", t.toString())
-            }
+        println("Hola*******++++ pendejos ***************")
 
+        call?.enqueue(object: Callback<IncidentsResponse>{
             override fun onResponse(
-                call: Call<List<IncidentsResponse>>,
-                response: Response<List<IncidentsResponse>>
+                call: Call<IncidentsResponse>,
+                response: Response<IncidentsResponse>
             ) {
+                println(response)
                 if(response?.isSuccessful!!){
                     var results = response?.body()
-                    print("**********data ***********")
-                    print(results)
+                    Log.i("****dasdasdas*****", results.toString())
+                    println("**********data ***********")
+                    println(results)
 
                 }
             }
+
+            override fun onFailure(call: Call<IncidentsResponse>, t: Throwable) {
+                Log.e("Fail response", t.toString())
+                println(t.toString())
+
+            }
+
         })
     }
 
