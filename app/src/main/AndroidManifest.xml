@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Segurapp">
         <activity
+            android:name=".view.MapActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.IncidentsActivity"
             android:exported="false" />
         <activity
@@ -40,7 +43,11 @@
 
         <activity
             android:name=".view.Map"
-            android:label="@string/title_activity_map" />
+            android:label="@string/title_activity_map">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.CALL_PRIVILEGED" />

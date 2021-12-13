@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.segurapp.R
 import com.segurapp.interfaces.contactalert.ContactsAlertPresenter
 import com.segurapp.presenter.contactalert.ContactsAlertPresenterImpl
+import com.segurapp.view.MainActivity
 
 class HomeFragment : Fragment() {
     lateinit var contactsAlertPresenter: ContactsAlertPresenter
@@ -27,12 +28,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var ivVerMapa =  view.findViewById<ImageView>(R.id.image_view_ver_map)
+        val ivVerMapa =  view.findViewById<ImageView>(R.id.image_view_ver_map)
+        val ivCallEmergency = view.findViewById<ImageView>(R.id.image_view_enviar_alerta)
+
         ivVerMapa.setOnClickListener {
             //fun onClick(view: View){
-            val intent= Intent(context, Map::class.java)
-            startActivity(intent)
+            /*val intent= Intent(context, Map::class.java)
+            startActivity(intent)*/
             //}
+            (activity as MainActivity).showMap()
+        }
+        ivCallEmergency.setOnClickListener {
+            (activity as MainActivity).callEmergency()
         }
 
         /*this.contactsAlertPresenter =
@@ -53,7 +60,4 @@ class HomeFragment : Fragment() {
         super.onDestroy()
         this.contactsAlertPresenter.onDestroy()
     }*/
-
-
-
 }

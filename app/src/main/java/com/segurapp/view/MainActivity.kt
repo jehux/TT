@@ -15,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.segurapp.R
 import com.segurapp.interfaces.contactalert.ContactsAlertPresenter
 import com.segurapp.presenter.contactalert.ContactsAlertPresenterImpl
+import kotlin.collections.Map
 
 
 class MainActivity : AppCompatActivity() {
@@ -55,8 +56,18 @@ class MainActivity : AppCompatActivity() {
             //}
         }*/
 
+
         this.contactsAlertPresenter = ContactsAlertPresenterImpl(this, this)
 
+    }
+
+    fun showMap(){
+        val intent= Intent(this, MapActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun callEmergency(){
+        contactsAlertPresenter.callToEmergency()
     }
 
 
