@@ -59,7 +59,7 @@ class ContactsAlertPresenterImpl constructor(context: Context, activity: Activit
 
     //Por el momento no hace marcacion directa al 911, pero si con otros numeros, en desarrollo
     private fun callIntentEmergency(){
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:5533339999 "))
+        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:911 "))
         //intent.flags = Intent.FLAG_ACTIVITY_NO_USER_ACTION
         context.startActivity(intent)
     }

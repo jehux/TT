@@ -17,7 +17,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Segurapp">
+        android:theme="@style/Theme.Segurapp"
+        android:networkSecurityConfig="@xml/networking_security_config">
         <activity
             android:name=".view.MapActivity"
             android:exported="true" />

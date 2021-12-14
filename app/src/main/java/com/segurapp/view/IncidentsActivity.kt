@@ -8,9 +8,11 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.segurapp.R
+import com.segurapp.interactors.model.incident.IncidentModel
 import com.segurapp.interfaces.incidents.IncidentsPresenter
 import com.segurapp.interfaces.incidents.IncidentsView
 import com.segurapp.presenter.incidents.IncidentsPresenterImpl
@@ -23,6 +25,7 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
     private lateinit var view: View
     private lateinit var incidentsAdapter: IncidentsAdapter
     private lateinit var context: Context
+    private val NUMBER_ELEMT_IN_GRID = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,14 +36,15 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
 
         this.view = View(this)
         this.context = this
-        var linearLayoutManager: LinearLayoutManager = LinearLayoutManager(this)
+        var linearLayoutManager: LinearLayoutManager = GridLayoutManager(this, NUMBER_ELEMT_IN_GRID)
         this.recyclerViewIncidents.layoutManager = linearLayoutManager
-
+        println("hola amigos de yourube")
         incidentsPresenter = IncidentsPresenterImpl(this, this.view, this)
     }
 
     override fun onResume() {
         super.onResume()
+        println("hola amigos de yourube")
         this.incidentsPresenter.loadIncidents()
     }
 
@@ -50,7 +54,8 @@ class IncidentsActivity : AppCompatActivity(), IncidentsView {
     override fun hideProgressBar(): Unit{
         this.progressMoreIncidents.visibility = View.GONE
     }
-    override fun showIncidentsCards(incidents: Array<String>): Unit {
+    override fun showIncidentsCards(incidents: List<IncidentModel>): Unit {
+        println("hola amigos de yourube")
         this.incidentsAdapter = IncidentsAdapter(incidents)
         this.recyclerViewIncidents.adapter = this.incidentsAdapter
         this.incidentsAdapter?.notifyDataSetChanged()
