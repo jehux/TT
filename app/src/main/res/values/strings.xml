@@ -22,5 +22,6 @@
     <string name="home">home</string>
     <string name="perfil">Perfil</string>
     <string name="contactos">contactos</string>
+    <string name="config">configuracion</string>
 
 </resources>
