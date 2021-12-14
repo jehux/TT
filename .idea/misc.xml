@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/back_btn_corner.xml" value="0.1" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/btn_back_from_map.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/img_avatar.xml" value="0.1" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/shape_avatar.xml" value="0.1" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/shape_button_continuar.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/drawable/shape_vincular.xml" value="0.1" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_fragment_introduction.xml" value="0.16485507246376813" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_incidents.xml" value="0.11820652173913043" />
         <entry key="..\:/Users/Javier/AndroidStudioProjects/TT/app/src/main/res/layout/activity_main.xml" value="0.16485507246376813" />
