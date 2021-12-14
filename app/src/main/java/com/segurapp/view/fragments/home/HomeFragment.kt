@@ -1,5 +1,6 @@
 package com.segurapp.view.fragments.home
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.segurapp.R
 import com.segurapp.interfaces.contactalert.ContactsAlertPresenter
@@ -16,7 +18,7 @@ import com.segurapp.view.MainActivity
 
 class HomeFragment : Fragment() {
     lateinit var contactsAlertPresenter: ContactsAlertPresenter
-
+    lateinit var tvUserName: TextView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +32,7 @@ class HomeFragment : Fragment() {
 
         val ivVerMapa =  view.findViewById<ImageView>(R.id.image_view_ver_map)
         val ivCallEmergency = view.findViewById<ImageView>(R.id.image_view_enviar_alerta)
-
+        tvUserName = view.findViewById(R.id.textView_bienvenida)
         ivVerMapa.setOnClickListener {
             //fun onClick(view: View){
             /*val intent= Intent(context, Map::class.java)
@@ -60,4 +62,12 @@ class HomeFragment : Fragment() {
         super.onDestroy()
         this.contactsAlertPresenter.onDestroy()
     }*/
+
+    override fun onResume() {
+        super.onResume()
+        //val sharedPref = activity?.getSharedPreferences( "key_name", Context.MODE_PRIVATE)
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        val text = sharedPref.getString("key_name", "")
+        tvUserName.text = "Bienvenida $text"
+    }
 }

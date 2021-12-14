@@ -1,18 +1,33 @@
 package com.segurapp.view.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.segurapp.R
 
 
 class PerfilFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private lateinit var name: EditText
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        name = view.findViewById(R.id.editTextTextPersonName)
+
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+        val text = sharedPref?.getString("key_name", "")
+
+        name.setText(text)
+        val tvButtonOk = view.findViewById<TextView>(R.id.textViewButtonOk)
+        tvButtonOk.setOnClickListener {
+            setSharePreferences(name.text.toString())
+        }
     }
 
     override fun onCreateView(
@@ -21,6 +36,15 @@ class PerfilFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil, container, false)
+    }
+
+    fun setSharePreferences(name: String){
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return
+        with (sharedPref.edit()) {
+            putString("key_name", name)
+            commit()
+        }
+        Toast.makeText(context,"Perfil guardado",Toast.LENGTH_SHORT).show()
     }
 
     fun onCheckboxClicked(view: View) {
