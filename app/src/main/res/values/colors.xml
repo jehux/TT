@@ -24,5 +24,6 @@
 
     <color name="background_vincular_inical">#170C6C</color>
     <color name="background_vincular_final">#1CACDE</color>
+    <color name="background_semi_transparent">#AAF7F7F7</color>
 
 </resources>

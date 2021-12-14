@@ -7,10 +7,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.segurapp.R
+import com.segurapp.interactors.model.incident.IncidentModel
+import com.segurapp.interactors.model.incident.IncidentsResponse
 
-class IncidentsAdapter(private val dataSet: Array<String>) :
+class IncidentsAdapter(private val dataSet: List<IncidentModel>) :
     RecyclerView.Adapter<IncidentsAdapter.ViewHolder>(){
     class ViewHolder(view: View): RecyclerView.ViewHolder (view) {
+        val titleIncident: TextView = view.findViewById(R.id.title_incident)
         val descriptionIncident: TextView = view.findViewById(R.id.description_incident_card)
         val imageIncident: ImageView = view.findViewById(R.id.incident_image_card)
     }
@@ -24,8 +27,8 @@ class IncidentsAdapter(private val dataSet: Array<String>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-
-        viewHolder.descriptionIncident.text = dataSet[position]
+        viewHolder.titleIncident.text = dataSet[position].titleIncident
+        viewHolder.descriptionIncident.text = dataSet[position].descriptionIncident
         viewHolder.imageIncident.setImageResource(R.drawable.holderincidents)
     }
 

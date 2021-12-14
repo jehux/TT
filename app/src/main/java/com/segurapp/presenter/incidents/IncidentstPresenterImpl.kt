@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.View
 import android.app.Activity
 import com.segurapp.interactors.interactor.incident.IncidentsInteractorImpl
+import com.segurapp.interactors.model.incident.IncidentModel
+import com.segurapp.interactors.model.incident.IncidentsResponse
 import com.segurapp.interfaces.incidents.IncidentsInteractor
 import com.segurapp.interfaces.incidents.IncidentsPresenter
 import com.segurapp.interfaces.incidents.IncidentsView
@@ -20,14 +22,19 @@ class IncidentsPresenterImpl constructor(
         this.incidentsView.showProgressBar()
         try {
             //Aqui va la llamada a la api
-            val incidents = arrayOf("Hola", "dadsas", "dajsdkals", "dakjsdklas", "dkajsdklas", "jdajsdkla")
-            this.incidentsView.showIncidentsCards(incidents)
-            println("hola anmigos de youtube**********")
-            this.incidentsInteractor.getIncidents("ditto", this)
+            //val incidents = arrayOf("Hola", "dadsas", "dajsdkals", "dakjsdklas", "dkajsdklas", "jdajsdkla")
+            //this.incidentsView.showIncidentsCards(incidents)
+            this.incidentsInteractor.getIncidents("incidentes", this)
         }catch (e: Exception){
-            println("Error**********trycarch")
             println(e.printStackTrace())
             this.incidentsView.setMessageError("Algo salio, intente de nuevo")
+        }
+
+    }
+
+    override fun listSuccessLoad(incidents: List<IncidentModel>?) {
+        if (incidents != null) {
+            this.incidentsView.showIncidentsCards(incidents)
         }
         this.incidentsView.hideProgressBar()
     }

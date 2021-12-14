@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface IncidentsServices {
-    @GET(ConstantsAPI.INCIDENT)
-    fun getIncidents(@Path("incident") parameterName: String): Call<IncidentsResponse>
+    @GET(ConstantsAPI.PARAMETER)
+    fun getIncidents(@Path("parameter") parameterName: String): Call<IncidentsResponse>
 
 }

@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="12dp"
-        card_view:cardBackgroundColor="@color/white">
+        card_view:cardBackgroundColor="@color/background_semi_transparent"
+        card_view:cardCornerRadius="10dp">
 
         <ImageView
             android:id="@+id/incident_image_card"

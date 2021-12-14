@@ -2,6 +2,7 @@ package com.segurapp.interactors.interactor.incident
 
 import android.util.Log
 import com.segurapp.interactors.API.APISeguraApp
+import com.segurapp.interactors.model.incident.IncidentModel
 import com.segurapp.interactors.model.incident.IncidentsResponse
 import com.segurapp.interfaces.incidents.IncidentsInteractor
 import com.segurapp.interfaces.incidents.IncidentsPresenter
@@ -31,6 +32,8 @@ class IncidentsInteractorImpl : IncidentsInteractor{
                 println(response)
                 if(response?.isSuccessful!!){
                     var results = response?.body()
+                    var data: List<IncidentModel>? = results?.data
+                    incidentsPresenter.listSuccessLoad(data)
                     Log.i("****dasdasdas*****", results.toString())
                     println("**********data ***********")
                     println(results)
