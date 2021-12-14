@@ -4,7 +4,6 @@
         android:id="@+id/homeFragment2"
         android:icon="@drawable/casa"
         android:title="@string/home" />
-
     <item
         android:id="@+id/perfilFragment"
         android:icon="@drawable/usuario"
@@ -14,6 +13,11 @@
         android:id="@+id/contactosFragment"
         android:icon="@drawable/contactos"
         android:title="@string/contactos"
+        />
+    <item
+        android:id="@+id/configFragment"
+        android:icon="@drawable/icon_config"
+        android:title="@string/config"
         />
 
 </menu>
